@@ -29,8 +29,8 @@ app.get('/',function(req,res){
 app.get('/webhook',function(req,res){
     if(req.query['hub.verify_token']=='token_rkz')
     {
-        res.send(req.query['hub.challenge']);
 		console.log('Entro');
+        res.send(req.query['hub.challenge']);
     }else
     {
         res.send('No tienes el token amiguito, quitea!');
@@ -41,7 +41,7 @@ app.post('/webhook',function(req,res){
     var data = req.body;
     if(data.object =='page')
     {
-		console.log(data.object);
+		console.log(data);
         data.entry.forEach(function(pageEntry)
     {
         pageEntry.messaging.forEach(function(messagingEvent)
