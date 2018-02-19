@@ -1,0 +1,31 @@
+{
+  "name": "botsfacebook",
+  "version": "1.0.0",
+  "description": "Boto para facebook",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "body-parser": "^1.18.2",
+    "request": "^2.83.0",
+    "serialport": "^6.0.5",
+    "tslib": "^1.9.0"
+  },
+  "engines": {
+    "node": "7.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+	"start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dbotcorps/Heroku_Sama.git"
+  },
+  "author": "RKZ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dbotcorps/Heroku_Sama/issues"
+  },
+  "homepage": "https://github.com/dbotcorps/Heroku_Sama#readme"
+}
