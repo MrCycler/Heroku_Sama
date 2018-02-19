@@ -58,6 +58,7 @@ app.post('/webhook',function(req,res){
 function receiveMessage(event){
     var senderID = event.sender.id;
     var messageText = event.message.text;
+	console.log(messageText);
     evaluateMessage(senderID,messageText);
 }
 
