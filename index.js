@@ -23,7 +23,7 @@ console.log("El servidor esta en el puerto 3000");
 });
 
 app.get('/',function(req,res){
-    res.send('Bienvenido al taller');
+    res.send('Bienvenido a la app del RKZ');
 });
 
 app.get('/webhook',function(req,res){
@@ -32,7 +32,7 @@ app.get('/webhook',function(req,res){
         res.send(req.query['hub.challenge']);
     }else
     {
-        res.send('Largate');
+        res.send('No tienes el token amiguito, quitea!');
     }
 });
 
