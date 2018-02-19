@@ -4,11 +4,12 @@
   "description": "Boto para facebook",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.16.2",
     "body-parser": "^1.18.2",
+    "express": "^4.16.2",
     "request": "^2.83.0",
     "serialport": "^6.0.5",
-    "tslib": "^1.9.0"
+    "tslib": "^1.9.0",
+    "uglifyjs": "^2.4.11"
   },
   "engines": {
     "node": "7.4.0"
