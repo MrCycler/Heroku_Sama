@@ -27,7 +27,7 @@ app.get('/',function(req,res){
 });
 
 app.get('/webhook',function(req,res){
-    if(req.query['hub.verify_token']==='token_rkz')
+    if(req.query['hub.verify_token']=='token_rkz')
     {
         res.send(req.query['hub.challenge']);
 		console.log('Entro');
