@@ -13,11 +13,13 @@ var serialPort = new SerialPort("/dev/cu.usbmodem14131", {
 */
 const APP_TOKEN ='EAACj7WZBrSiABAGBfVnLfS6TZA4vO34LMN6ieF2fjvJXtY5i0w6T1yRHaGz2ZCgw3FACiygXupFqB4DZAZCnnc1MZC6UL6nVNw3ZAZChH57H98Q3YZBC6yckR3nLuq5oRrPsAk1GcbO1fOMtXYLgAa452IGoaNncxsfR8eUhwNW4ZCzwZDZD';
 
+const port = process.env.PORT || 3000;
+
 var app = express();
 app.use(bodyParser.json());
 
 console.log("El servidor esta en el puerto 3000");
-    app.listen(3000,function (){
+    app.listen(port,function (){
 });
 
 app.get('/',function(req,res){
