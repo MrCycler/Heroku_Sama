@@ -30,6 +30,7 @@ app.get('/webhook',function(req,res){
     if(req.query['hub.verify_token']==='token_rkz')
     {
         res.send(req.query['hub.challenge']);
+		console.log('Entro');
     }else
     {
         res.send('No tienes el token amiguito, quitea!');
@@ -40,6 +41,7 @@ app.post('/webhook',function(req,res){
     var data = req.body;
     if(data.object =='page')
     {
+		console.log(data.object);
         data.entry.forEach(function(pageEntry)
     {
         pageEntry.messaging.forEach(function(messagingEvent)
@@ -58,6 +60,7 @@ app.post('/webhook',function(req,res){
 function receiveMessage(event){
     var senderID = event.sender.id;
     var messageText = event.message.text;
+	console.log('Mensaje:');
 	console.log(messageText);
     evaluateMessage(senderID,messageText);
 }
